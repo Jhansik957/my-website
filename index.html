@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRISPR Design Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>CRISPR Design Tool</h1>
+            <ul>
+                <li><a href="#gRNA-design">Guide RNA Design</a></li>
+                <li><a href="#off-target">Off-Target Analysis</a></li>
+                <li><a href="#batch">Batch Processing</a></li>
+                <li><a href="#collaboration">Collaboration</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Section: Guide RNA Design -->
+        <section id="gRNA-design">
+            <h2>Guide RNA Design</h2>
+            <form id="gRNA-form">
+                <label for="sequence">Enter Target Sequence:</label>
+                <textarea id="sequence" rows="4" placeholder="Enter DNA sequence here..."></textarea>
+                <label for="genome">Select Genome:</label>
+                <select id="genome">
+                    <option value="human">Human</option>
+                    <option value="mouse">Mouse</option>
+                    <option value="custom">Custom Genome</option>
+                </select>
+                <button type="submit">Design gRNA</button>
+            </form>
+            <div id="gRNA-results">
+                <!-- Results will appear here dynamically -->
+            </div>
+        </section>
+        
+        <!-- Section: Off-Target Analysis -->
+        <section id="off-target">
+            <h2>Off-Target Analysis</h2>
+            <p>Visualize and analyze potential off-target sites for selected gRNAs.</p>
+            <div id="off-target-results">
+                <!-- Off-target results will be dynamically rendered -->
+            </div>
+        </section>
+
+        <!-- Section: Batch Processing -->
+        <section id="batch">
+            <h2>Batch Processing</h2>
+            <p>Upload multiple sequences to design gRNAs in bulk.</p>
+            <form id="batch-form" enctype="multipart/form-data">
+                <label for="batch-file">Upload Sequence File:</label>
+                <input type="file" id="batch-file" accept=".txt, .fasta">
+                <button type="submit">Process Batch</button>
+            </form>
+            <div id="batch-results">
+                <!-- Batch processing results will appear here -->
+            </div>
+        </section>
+
+        <!-- Section: Collaboration -->
+        <section id="collaboration">
+            <h2>Collaboration</h2>
+            <p>Share your designs with team members and collaborate in real-time.</p>
+            <div id="collaboration-tools">
+                <button>Share Project</button>
+                <button>Open Discussion</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CRISPR Design Tool. All rights reserved.</p>
+    </footer>
+</body>
+</html>
